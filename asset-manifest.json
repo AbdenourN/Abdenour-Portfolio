@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/Abdenour-Portfolio/static/css/main.0d12adad.css",
-    "main.js": "/Abdenour-Portfolio/static/js/main.c3603dcf.js",
+    "main.js": "/Abdenour-Portfolio/static/js/main.478671a7.js",
     "static/js/415.4d6acbeb.chunk.js": "/Abdenour-Portfolio/static/js/415.4d6acbeb.chunk.js",
     "static/js/787.1ed0c42c.chunk.js": "/Abdenour-Portfolio/static/js/787.1ed0c42c.chunk.js",
-    "static/media/CV4.pdf": "/Abdenour-Portfolio/static/media/CV4.cc7ffdc95a65f3169973.pdf",
+    "static/media/CV4.pdf": "/Abdenour-Portfolio/static/media/CV4.1b05964079c44dd3ac7e.pdf",
     "static/media/dicho.jpg": "/Abdenour-Portfolio/static/media/dicho.786d318e57a4cc716bf2.jpg",
     "static/media/mariage.jpg": "/Abdenour-Portfolio/static/media/mariage.5ce78441a7b410189c60.jpg",
     "static/media/bdd.jpg": "/Abdenour-Portfolio/static/media/bdd.33d0f98b292372952c03.jpg",
@@ -19,12 +19,12 @@
     "static/media/pre.svg": "/Abdenour-Portfolio/static/media/pre.4410c5baaa673cc131da.svg",
     "index.html": "/Abdenour-Portfolio/index.html",
     "main.0d12adad.css.map": "/Abdenour-Portfolio/static/css/main.0d12adad.css.map",
-    "main.c3603dcf.js.map": "/Abdenour-Portfolio/static/js/main.c3603dcf.js.map",
+    "main.478671a7.js.map": "/Abdenour-Portfolio/static/js/main.478671a7.js.map",
     "415.4d6acbeb.chunk.js.map": "/Abdenour-Portfolio/static/js/415.4d6acbeb.chunk.js.map",
     "787.1ed0c42c.chunk.js.map": "/Abdenour-Portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0d12adad.css",
-    "static/js/main.c3603dcf.js"
+    "static/js/main.478671a7.js"
   ]
 }
