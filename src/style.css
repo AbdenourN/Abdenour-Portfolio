@@ -741,3 +741,18 @@ button:focus {
 .fork-btn-inner::after {
   display: none !important;
 }
+
+.image-text-layout {
+  display: flex;
+  flex-direction: row;
+}
+
+.image-slider {
+  flex: 1;
+}
+
+.text-content {
+  flex: 1;
+  padding: 0 20px;
+}
+

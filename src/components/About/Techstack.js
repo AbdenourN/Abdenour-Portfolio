@@ -13,6 +13,8 @@ import {
   DiAndroid,
   DiCss3,
   DiBootstrap,
+  DiHtml5,
+  DiDocker,
 } from "react-icons/di";
 import {
   SiRedis,
@@ -24,6 +26,8 @@ import {
   SiJquery,
   SiMysql,
   Si1001Tracklists,
+  SiSelenium,
+  SiReact,
 } from "react-icons/si";
 import { TbBrandGolang } from "react-icons/tb";
 
@@ -31,37 +35,7 @@ function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        <DiPhp />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiC />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiBootstrap />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiJquery />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiMongodb />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiAndroid />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiMysql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPostgresql />
+        <DiHtml5 />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiCss3 />
@@ -72,6 +46,38 @@ function Techstack() {
       <Col xs={4} md={2} className="tech-icons">
         <DiJava />
       </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <DiJavascript1 />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiReact />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <DiNodejs />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiJquery />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiC />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiSelenium/>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <DiDocker />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <DiGit />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiMysql />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiPostgresql />
+      </Col>
+
+
     </Row>
   );
 }

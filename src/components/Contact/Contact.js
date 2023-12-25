@@ -1,67 +1,128 @@
-import React, { useState, useEffect } from "react";
-import { Container, Row } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
+import React, { useState } from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
-import { AiOutlineDownload } from "react-icons/ai";
-import axios from "axios";
+import {
+  AiFillGithub,
+  AiFillPhone,
+  AiOutlineMail,
+} from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
+import "./t.css";
 
-function Contact() {
-    const [formData, setFormData] = useState({
-      name: "",
-      email: "",
-      message: "",
+function ContactForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const { name, email, message } = formData;
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    fetch('sendEmail.php', {
+      method: 'POST',
+      body: JSON.stringify(formData),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data); // Afficher la réponse du serveur
+      // Réinitialiser le formulaire après l'envoi
+      setFormData({ name: "", email: "", message: "" });
+    })
+    .catch(error => {
+      console.error('Erreur :', error);
     });
-  
-    const handleChange = (e) => {
-      setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-  
-    const handleSubmit = async (e) => {
-      e.preventDefault();
-      try {
-        await axios.post("/api/contact", formData); // Remplace '/api/contact' par ton endpoint de backend pour le traitement du formulaire
-        alert("Message envoyé !");
-        setFormData({ name: "", email: "", message: "" });
-      } catch (error) {
-        console.error("Erreur lors de l'envoi du message :", error);
-        alert("Une erreur s'est produite lors de l'envoi du message.");
-      }
-    };
-  
-    return (
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Nom :</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="email">Email :</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="message">Message :</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-          />
-        </div>
-        <button type="submit">Envoyer</button>
-      </form>
-    );
-  }
-  
-  export default Contact;
+  };
+
+  return (
+    <Container fluid className="home-about-section" id="about">
+      <Particle />
+      <Container>
+        <Row>
+          <Col md={12} className="home-about-social" id="contactSection">
+            <h1>RETROUVEZ-MOI SUR</h1>
+            <p>
+              N'hésitez pas à me <span className="purple">contacter </span>
+            </p>
+            <ul className="home-about-social-links">
+              <li className="social-icons">
+                <a
+                  href="https://github.com/AbdenourN/Projets"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                >
+                  <AiFillGithub />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="mailto:ab.nejjari@hotmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                >
+                  <AiOutlineMail />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://www.linkedin.com/in/abdenour-nejjari-57a4ba254/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                >
+                  <FaLinkedinIn />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="tel:"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour home-social-icons"
+                >
+                  <AiFillPhone />
+                </a>
+              </li>
+            </ul>
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                placeholder="Nom"
+                name="name"
+                value={name}
+                onChange={handleChange}
+              />
+              <input
+                type="email"
+                placeholder="E-mail"
+                name="email"
+                value={email}
+                onChange={handleChange}
+              />
+              <textarea
+                placeholder="Votre message"
+                name="message"
+                value={message}
+                onChange={handleChange}
+              ></textarea>
+              <button type="submit">Envoyer</button>
+            </form>
+          </Col>
+        </Row>
+      </Container>
+    </Container>
+  );
+}
+
+export default ContactForm;

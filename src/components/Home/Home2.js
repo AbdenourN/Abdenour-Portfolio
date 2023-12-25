@@ -31,7 +31,7 @@ function Home2() {
               <br />
               Mes domaines d'intérêt incluent &nbsp;
               <i>
-                <b className="purple">la création de nouveaux sites internet, de scripts automatisés</b>  
+                <b className="purple">la création de nouveaux sites internet, de scripts automatisés </b>  
                 ainsi que des domaines liés à {" "}
                 <b className="purple">
                 l'intelligence artificielle.
@@ -60,7 +60,7 @@ function Home2() {
           </Col>
         </Row>
         <Row>
-          <Col md={12} className="home-about-social">
+          <Col md={12} className="home-about-social" id="contactSection">
             <h1>RETROUVEZ-MOI SUR</h1>
             <p>
             N'hésitez pas à me <span className="purple">contacter </span>
