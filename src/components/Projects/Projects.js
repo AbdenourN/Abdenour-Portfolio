@@ -87,7 +87,7 @@ function Projects() {
                 </>
               }
               ghLink="https://github.com/AbdenourN/Projets/tree/main/Projets/Projets%20Informatique/Cr%C3%A9ation%20d'une%20plateforme%20de%20gestion%20de%20stage"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+               
             />
           </Col>
 
@@ -216,10 +216,11 @@ function Projects() {
               demoLink="https://mesprojets1.000webhostapp.com/PS/1/Projets/mathpy/SaeMaths.html"  
             />
           </Col>
-                
+      <div className="lien">          
       <Link to="https://mesprojets1.000webhostapp.com/index.html">
         Voir mes autres projets scolaires, personnels et professionnels
       </Link>
+      </div>
         </Row>
       </Container>
 
