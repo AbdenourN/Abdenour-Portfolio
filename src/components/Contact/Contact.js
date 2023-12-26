@@ -95,6 +95,7 @@ function ContactForm() {
                 </a>
               </li>
             </ul>
+            <div className="contact-form-container">
             <form onSubmit={handleSubmit}>
               <input
                 type="text"
@@ -118,6 +119,7 @@ function ContactForm() {
               ></textarea>
               <button type="submit">Envoyer</button>
             </form>
+           </div>
           </Col>
         </Row>
       </Container>
