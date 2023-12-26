@@ -34,3 +34,7 @@ form {
     background-color: #555;
   }
   
+.contact-form-container {
+  position: relative; 
+  z-index: 1; 
+}
