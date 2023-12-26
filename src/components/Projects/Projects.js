@@ -219,7 +219,7 @@ function Projects() {
             />
           </Col>
       <div className="lien">          
-      <Link to="https://mesprojets1.000webhostapp.com/index.html">
+      <Link to="https://mesprojets1.000webhostapp.com/index.php">
         Voir mes autres projets scolaires, personnels et professionnels
       </Link>
       </div>
