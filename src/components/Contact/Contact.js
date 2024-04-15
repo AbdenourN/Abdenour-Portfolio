@@ -34,9 +34,13 @@ function ContactForm() {
     })
     .then(response => response.json())
     .then(data => {
-      console.log(data); // Afficher la réponse du serveur
-      // Réinitialiser le formulaire après l'envoi
-      setFormData({ name: "", email: "", message: "" });
+      if (data.success) {
+        // Réinitialiser le formulaire après l'envoi
+        setFormData({ name: "", email: "", message: "" });
+        console.log(data.message); // Afficher le message de confirmation
+      } else {
+        console.error('Erreur :', data.message); // Afficher le message d'erreur
+      }
     })
     .catch(error => {
       console.error('Erreur :', error);
@@ -95,6 +99,7 @@ function ContactForm() {
                 </a>
               </li>
             </ul>
+            <div className="contact-form-container">
             <form onSubmit={handleSubmit}>
               <input
                 type="text"
@@ -118,6 +123,7 @@ function ContactForm() {
               ></textarea>
               <button type="submit">Envoyer</button>
             </form>
+            </div>
           </Col>
         </Row>
       </Container>

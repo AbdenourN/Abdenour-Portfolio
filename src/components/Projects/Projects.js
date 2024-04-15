@@ -12,6 +12,8 @@ import bitsOfCode from "../../Assets/Projects/python.png";
 import eloq from "../../Assets/Projects/eloquence.png"
 import mariage from "../../Assets/Projects/mariage.jpg"
 import dicho from "../../Assets/Projects/dicho.jpg"
+import "./tt.css";
+
 function Projects() {
   return (
     <Container fluid className="project-section">
@@ -216,10 +218,11 @@ function Projects() {
               demoLink="https://mesprojets1.000webhostapp.com/PS/1/Projets/mathpy/SaeMaths.html"  
             />
           </Col>
-                
+      <div className="lien">          
       <Link to="https://mesprojets1.000webhostapp.com/index.html">
         Voir mes autres projets scolaires, personnels et professionnels
       </Link>
+      </div>
         </Row>
       </Container>
 
