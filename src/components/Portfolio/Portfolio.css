@@ -1,0 +1,21 @@
+.resume-new {
+  min-height: 100vh; 
+}
+
+.portfolio-message {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.portfolio-button {
+  max-width: 250px;
+  margin-top: 20px;
+}
+
+.footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
